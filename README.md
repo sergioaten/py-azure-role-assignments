@@ -32,6 +32,9 @@ python main.py -n example@example.com -t user -s 00000000-0000-0000-0000-0000000
 python main.py -n APP-TEST -t servicePrincipal -o csv -o json
 ```
 
+```
+python main.py -n "AZ-ADMINS" -t group
+```
 
 ## Output
 The script generates an output table displaying role assignments for the specified principal within Azure subscriptions. Additionally, it saves the data in either JSON or CSV format based on the specified output format.
