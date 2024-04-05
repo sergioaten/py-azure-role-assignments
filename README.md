@@ -18,10 +18,10 @@ python script_name.py -n/--principal-name <Principal Name> -t/--principal-type <
 ```
 
 ## Command-line Arguments:
-`-n, --principal-name`: Principal name to get role assignments for (user -> Email, group -> Group Name, servicePrincipal -> Service Principal Name).
-`-t, --principal-type`: Principal type (choices: user, group, servicePrincipal).
-`-s, --subscription-id`: (Optional) Subscription ID to get role assignments for. If not provided, role assignments for all subscriptions will be checked.
-`-o, --output`: (Optional) Output file format. It will create output.csv/json file in the current directory (choices: json, csv).
+- `-n, --principal-name`: Principal name to get role assignments for (user -> Email, group -> Group Name, servicePrincipal -> Service Principal Name).
+- `-t, --principal-type`: Principal type (choices: user, group, servicePrincipal).
+- `-s, --subscription-id`: (Optional) Subscription ID to get role assignments for. If not provided, role assignments for all subscriptions will be checked.
+- `-o, --output`: (Optional) Output file format. It will create output.csv/json file in the current directory (choices: json, csv).
 
 ## Example
 ```
