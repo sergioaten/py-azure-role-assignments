@@ -1,0 +1,572 @@
+[
+  {
+    "subscriptionName": "Contoso-Prod",
+    "subscriptionId": "f1g2h3i4-j5k6-7l8m-9n0o-1p2q3r4s5t6u",
+    "roleName": "Storage Blob Data Contributor",
+    "resourceType": "Microsoft.Storage/storageAccounts",
+    "resourceName": "storagecontosoprod001",
+    "assignetToType": "group",
+    "assignedTo": "Contoso-Prod-Team",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Dev",
+    "subscriptionId": "a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
+    "roleName": "Virtual Machine Contributor",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "resourceName": "vm-contoso-dev-001",
+    "assignetToType": "group",
+    "assignedTo": "Contoso-Dev-Engineers",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Dev",
+    "subscriptionId": "a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
+    "roleName": "SQL Server Contributor",
+    "resourceType": "Microsoft.Sql/servers",
+    "resourceName": "sql-contoso-dev-001",
+    "assignetToType": "group",
+    "assignedTo": "Contoso-Dev-DBA-Team",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Prod",
+    "subscriptionId": "f1g2h3i4-j5k6-7l8m-9n0o-1p2q3r4s5t6u",
+    "roleName": "Network Contributor",
+    "resourceType": "Microsoft.Network/virtualNetworks",
+    "resourceName": "vnet-contoso-prod-001",
+    "assignetToType": "group",
+    "assignedTo": "Contoso-Prod-Network-Team",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Dev",
+    "subscriptionId": "a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
+    "roleName": "Key Vault Contributor",
+    "resourceType": "Microsoft.KeyVault/vaults",
+    "resourceName": "kv-contoso-dev-001",
+    "assignetToType": "group",
+    "assignedTo": "Contoso-Dev-Security-Team",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Test",
+    "subscriptionId": "t1e2s3t4-5t6e-7s8t-9s0u-1b2s3c4r5i6p",
+    "roleName": "Reader",
+    "resourceType": "Microsoft.Storage/storageAccounts",
+    "resourceName": "storagecontosotest001",
+    "assignetToType": "user",
+    "assignedTo": "testuser@contoso.com",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Prod",
+    "subscriptionId": "f1g2h3i4-j5k6-7l8m-9n0o-1p2q3r4s5t6u",
+    "roleName": "Contributor",
+    "resourceType": "Microsoft.Compute/disks",
+    "resourceName": "disk-contoso-prod-001",
+    "assignetToType": "user",
+    "assignedTo": "prodadmin@contoso.com",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Dev",
+    "subscriptionId": "a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
+    "roleName": "Owner",
+    "resourceType": "Microsoft.Web/sites",
+    "resourceName": "webapp-contoso-dev-001",
+    "assignetToType": "user",
+    "assignedTo": "devlead@contoso.com",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Test",
+    "subscriptionId": "t1e2s3t4-5t6e-7s8t-9s0u-1b2s3c4r5i6p",
+    "roleName": "Contributor",
+    "resourceType": "Microsoft.Network/publicIPAddresses",
+    "resourceName": "ip-contoso-test-001",
+    "assignetToType": "user",
+    "assignedTo": "testadmin@contoso.com",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Prod",
+    "subscriptionId": "f1g2h3i4-j5k6-7l8m-9n0o-1p2q3r4s5t6u",
+    "roleName": "Contributor",
+    "resourceType": "Microsoft.Authorization/policyAssignments",
+    "resourceName": "policy-contoso-prod-001",
+    "assignetToType": "user",
+    "assignedTo": "prodsecurity@contoso.com",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Dev",
+    "subscriptionId": "a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
+    "roleName": "Cosmos DB Contributor",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts",
+    "resourceName": "cosmos-contoso-dev-001",
+    "assignetToType": "group",
+    "assignedTo": "Contoso-Dev-Data-Team",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Prod",
+    "subscriptionId": "f1g2h3i4-j5k6-7l8m-9n0o-1p2q3r4s5t6u",
+    "roleName": "Reader",
+    "resourceType": "Microsoft.Network/networkInterfaces",
+    "resourceName": "nic-contoso-prod-001",
+    "assignetToType": "group",
+    "assignedTo": "Contoso-Prod-Network-Team",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Test",
+    "subscriptionId": "t1e2s3t4-5t6e-7s8t-9s0u-1b2s3c4r5i6p",
+    "roleName": "Contributor",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "resourceName": "vm-contoso-test-001",
+    "assignetToType": "group",
+    "assignedTo": "Contoso-Test-Engineers",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Dev",
+    "subscriptionId": "a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
+    "roleName": "Reader",
+    "resourceType": "Microsoft.Storage/storageAccounts",
+    "resourceName": "storage-contoso-dev-002",
+    "assignetToType": "group",
+    "assignedTo": "Contoso-Dev-Team",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Prod",
+    "subscriptionId": "f1g2h3i4-j5k6-7l8m-9n0o-1p2q3r4s5t6u",
+    "roleName": "Contributor",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "resourceName": "vm-contoso-prod-002",
+    "assignetToType": "group",
+    "assignedTo": "Contoso-Prod-Engineers",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Test",
+    "subscriptionId": "t1e2s3t4-5t6e-7s8t-9s0u-1b2s3c4r5i6p",
+    "roleName": "Owner",
+    "resourceType": "Microsoft.Storage/storageAccounts",
+    "resourceName": "storage-contoso-test-002",
+    "assignetToType": "user",
+    "assignedTo": "testlead@contoso.com",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Dev",
+    "subscriptionId": "a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
+    "roleName": "Contributor",
+    "resourceType": "Microsoft.Network/virtualNetworks",
+    "resourceName": "vnet-contoso-dev-002",
+    "assignetToType": "user",
+    "assignedTo": "devadmin@contoso.com",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Prod",
+    "subscriptionId": "f1g2h3i4-j5k6-7l8m-9n0o-1p2q3r4s5t6u",
+    "roleName": "Contributor",
+    "resourceType": "Microsoft.Network/networkSecurityGroups",
+    "resourceName": "nsg-contoso-prod-001",
+    "assignetToType": "group",
+    "assignedTo": "Contoso-Prod-Security-Team",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Test",
+    "subscriptionId": "t1e2s3t4-5t6e-7s8t-9s0u-1b2s3c4r5i6p",
+    "roleName": "Reader",
+    "resourceType": "Microsoft.Web/serverFarms",
+    "resourceName": "appservice-contoso-test-001",
+    "assignetToType": "group",
+    "assignedTo": "Contoso-Test-DevOps",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Dev",
+    "subscriptionId": "a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
+    "roleName": "Contributor",
+    "resourceType": "Microsoft.KeyVault/vaults",
+    "resourceName": "kv-contoso-dev-002",
+    "assignetToType": "user",
+    "assignedTo": "devsecurity@contoso.com",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Prod",
+    "subscriptionId": "f1g2h3i4-j5k6-7l8m-9n0o-1p2q3r4s5t6u",
+    "roleName": "Reader",
+    "resourceType": "Microsoft.Sql/servers",
+    "resourceName": "sql-contoso-prod-002",
+    "assignetToType": "user",
+    "assignedTo": "prodDBA@contoso.com",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Test",
+    "subscriptionId": "t1e2s3t4-5t6e-7s8t-9s0u-1b2s3c4r5i6p",
+    "roleName": "Contributor",
+    "resourceType": "Microsoft.ContainerRegistry/registries",
+    "resourceName": "acr-contoso-test-001",
+    "assignetToType": "group",
+    "assignedTo": "Contoso-Test-Containers",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Dev",
+    "subscriptionId": "a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
+    "roleName": "Reader",
+    "resourceType": "Microsoft.ContainerService/managedClusters",
+    "resourceName": "aks-contoso-dev-001",
+    "assignetToType": "group",
+    "assignedTo": "Contoso-Dev-Cluster-Team",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Prod",
+    "subscriptionId": "f1g2h3i4-j5k6-7l8m-9n0o-1p2q3r4s5t6u",
+    "roleName": "Contributor",
+    "resourceType": "Microsoft.Web/sites",
+    "resourceName": "webapp-contoso-prod-002",
+    "assignetToType": "user",
+    "assignedTo": "prodadmin2@contoso.com",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Test",
+    "subscriptionId": "t1e2s3t4-5t6e-7s8t-9s0u-1b2s3c4r5i6p",
+    "roleName": "Owner",
+    "resourceType": "Microsoft.ContainerRegistry/registries",
+    "resourceName": "acr-contoso-test-002",
+    "assignetToType": "user",
+    "assignedTo": "testadmin2@contoso.com",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Dev",
+    "subscriptionId": "a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
+    "roleName": "Contributor",
+    "resourceType": "Microsoft.Logic/workflows",
+    "resourceName": "logicapp-contoso-dev-001",
+    "assignetToType": "group",
+    "assignedTo": "Contoso-Dev-Integration-Team",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Prod",
+    "subscriptionId": "f1g2h3i4-j5k6-7l8m-9n0o-1p2q3r4s5t6u",
+    "roleName": "Reader",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "resourceName": "vmscaleset-contoso-prod-001",
+    "assignetToType": "group",
+    "assignedTo": "Contoso-Prod-AutoScale-Team",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Test",
+    "subscriptionId": "t1e2s3t4-5t6e-7s8t-9s0u-1b2s3c4r5i6p",
+    "roleName": "Contributor",
+    "resourceType": "Microsoft.Network/loadBalancers",
+    "resourceName": "lb-contoso-test-001",
+    "assignetToType": "user",
+    "assignedTo": "testnetwork@contoso.com",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Dev",
+    "subscriptionId": "a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
+    "roleName": "Contributor",
+    "resourceType": "Microsoft.Storage/storageAccounts",
+    "resourceName": "storage-contoso-dev-003",
+    "assignetToType": "user",
+    "assignedTo": "devlead2@contoso.com",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Prod",
+    "subscriptionId": "f1g2h3i4-j5k6-7l8m-9n0o-1p2q3r4s5t6u",
+    "roleName": "Contributor",
+    "resourceType": "Microsoft.DocumentDB/databaseAccounts",
+    "resourceName": "cosmos-contoso-prod-002",
+    "assignetToType": "group",
+    "assignedTo": "Contoso-Prod-DBA-Team",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Test",
+    "subscriptionId": "t1e2s3t4-5t6e-7s8t-9s0u-1b2s3c4r5i6p",
+    "roleName": "Owner",
+    "resourceType": "Microsoft.Compute/virtualMachines",
+    "resourceName": "vm-contoso-test-002",
+    "assignetToType": "group",
+    "assignedTo": "Contoso-Test-VM-Team",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Dev",
+    "subscriptionId": "a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
+    "roleName": "Reader",
+    "resourceType": "Microsoft.Network/virtualNetworks",
+    "resourceName": "vnet-contoso-dev-003",
+    "assignetToType": "user",
+    "assignedTo": "devnetwork@contoso.com",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Prod",
+    "subscriptionId": "f1g2h3i4-j5k6-7l8m-9n0o-1p2q3r4s5t6u",
+    "roleName": "Contributor",
+    "resourceType": "Microsoft.EventHub/namespaces",
+    "resourceName": "ehub-contoso-prod-001",
+    "assignetToType": "group",
+    "assignedTo": "Contoso-Prod-Messaging-Team",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Test",
+    "subscriptionId": "t1e2s3t4-5t6e-7s8t-9s0u-1b2s3c4r5i6p",
+    "roleName": "Reader",
+    "resourceType": "Microsoft.Compute/availabilitySets",
+    "resourceName": "avset-contoso-test-001",
+    "assignetToType": "group",
+    "assignedTo": "Contoso-Test-Operations",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Dev",
+    "subscriptionId": "a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
+    "roleName": "Contributor",
+    "resourceType": "Microsoft.Network/vpnGateways",
+    "resourceName": "vpn-contoso-dev-001",
+    "assignetToType": "user",
+    "assignedTo": "devops@contoso.com",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Prod",
+    "subscriptionId": "f1g2h3i4-j5k6-7l8m-9n0o-1p2q3r4s5t6u",
+    "roleName": "Contributor",
+    "resourceType": "Microsoft.ServiceBus/namespaces",
+    "resourceName": "sb-contoso-prod-001",
+    "assignetToType": "user",
+    "assignedTo": "prodmessaging@contoso.com",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Test",
+    "subscriptionId": "t1e2s3t4-5t6e-7s8t-9s0u-1b2s3c4r5i6p",
+    "roleName": "Owner",
+    "resourceType": "Microsoft.ServiceFabricMesh/clusters",
+    "resourceName": "sfmesh-contoso-test-001",
+    "assignetToType": "group",
+    "assignedTo": "Contoso-Test-App-Team",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Dev",
+    "subscriptionId": "a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
+    "roleName": "Contributor",
+    "resourceType": "Microsoft.Web/serverFarms",
+    "resourceName": "appservice-contoso-dev-002",
+    "assignetToType": "group",
+    "assignedTo": "Contoso-Dev-Web-Team",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Prod",
+    "subscriptionId": "f1g2h3i4-j5k6-7l8m-9n0o-1p2q3r4s5t6u",
+    "roleName": "Reader",
+    "resourceType": "Microsoft.Compute/galleries",
+    "resourceName": "gallery-contoso-prod-001",
+    "assignetToType": "user",
+    "assignedTo": "prodgallery@contoso.com",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Test",
+    "subscriptionId": "t1e2s3t4-5t6e-7s8t-9s0u-1b2s3c4r5i6p",
+    "roleName": "Contributor",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "resourceName": "vmscaleset-contoso-test-002",
+    "assignetToType": "group",
+    "assignedTo": "Contoso-Test-AutoScale-Team",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Dev",
+    "subscriptionId": "a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
+    "roleName": "Reader",
+    "resourceType": "Microsoft.ContainerRegistry/registries",
+    "resourceName": "acr-contoso-dev-003",
+    "assignetToType": "user",
+    "assignedTo": "devcontainers@contoso.com",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Prod",
+    "subscriptionId": "f1g2h3i4-j5k6-7l8m-9n0o-1p2q3r4s5t6u",
+    "roleName": "Contributor",
+    "resourceType": "Microsoft.Sql/servers/databases",
+    "resourceName": "sqldb-contoso-prod-001",
+    "assignetToType": "group",
+    "assignedTo": "Contoso-Prod-DBA-Team",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Test",
+    "subscriptionId": "t1e2s3t4-5t6e-7s8t-9s0u-1b2s3c4r5i6p",
+    "roleName": "Contributor",
+    "resourceType": "Microsoft.Network/networkWatchers",
+    "resourceName": "nw-contoso-test-001",
+    "assignetToType": "user",
+    "assignedTo": "testnetwork2@contoso.com",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Dev",
+    "subscriptionId": "a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
+    "roleName": "Reader",
+    "resourceType": "Microsoft.EventGrid/topics",
+    "resourceName": "eg-topic-contoso-dev-001",
+    "assignetToType": "group",
+    "assignedTo": "Contoso-Dev-Messaging-Team",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Prod",
+    "subscriptionId": "f1g2h3i4-j5k6-7l8m-9n0o-1p2q3r4s5t6u",
+    "roleName": "Contributor",
+    "resourceType": "Microsoft.CognitiveServices/accounts",
+    "resourceName": "cs-contoso-prod-001",
+    "assignetToType": "group",
+    "assignedTo": "Contoso-Prod-AI-Team",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Test",
+    "subscriptionId": "t1e2s3t4-5t6e-7s8t-9s0u-1b2s3c4r5i6p",
+    "roleName": "Contributor",
+    "resourceType": "Microsoft.Logic/workflows",
+    "resourceName": "logicapp-contoso-test-001",
+    "assignetToType": "group",
+    "assignedTo": "Contoso-Test-Integration-Team",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Dev",
+    "subscriptionId": "a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
+    "roleName": "Contributor",
+    "resourceType": "Microsoft.EventHub/namespaces",
+    "resourceName": "ehub-contoso-dev-001",
+    "assignetToType": "user",
+    "assignedTo": "devmessaging@contoso.com",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Prod",
+    "subscriptionId": "f1g2h3i4-j5k6-7l8m-9n0o-1p2q3r4s5t6u",
+    "roleName": "Contributor",
+    "resourceType": "Microsoft.KeyVault/vaults",
+    "resourceName": "kv-contoso-prod-001",
+    "assignetToType": "user",
+    "assignedTo": "prodsecurity2@contoso.com",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Test",
+    "subscriptionId": "t1e2s3t4-5t6e-7s8t-9s0u-1b2s3c4r5i6p",
+    "roleName": "Owner",
+    "resourceType": "Microsoft.ContainerService/managedClusters",
+    "resourceName": "aks-contoso-test-002",
+    "assignetToType": "group",
+    "assignedTo": "Contoso-Test-Kubernetes-Team",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Dev",
+    "subscriptionId": "a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
+    "roleName": "Contributor",
+    "resourceType": "Microsoft.Network/loadBalancers",
+    "resourceName": "lb-contoso-dev-001",
+    "assignetToType": "group",
+    "assignedTo": "Contoso-Dev-Network-Team",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Prod",
+    "subscriptionId": "f1g2h3i4-j5k6-7l8m-9n0o-1p2q3r4s5t6u",
+    "roleName": "Contributor",
+    "resourceType": "Microsoft.Compute/virtualMachines/extensions",
+    "resourceName": "vmextension-contoso-prod-001",
+    "assignetToType": "user",
+    "assignedTo": "prodops@contoso.com",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Test",
+    "subscriptionId": "t1e2s3t4-5t6e-7s8t-9s0u-1b2s3c4r5i6p",
+    "roleName": "Reader",
+    "resourceType": "Microsoft.Compute/galleries/images",
+    "resourceName": "galleryimage-contoso-test-001",
+    "assignetToType": "group",
+    "assignedTo": "Contoso-Test-VM-Image-Team",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Dev",
+    "subscriptionId": "a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d",
+    "roleName": "Contributor",
+    "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+    "resourceName": "vmscaleset-contoso-dev-001",
+    "assignetToType": "user",
+    "assignedTo": "devops2@contoso.com",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Prod",
+    "subscriptionId": "f1g2h3i4-j5k6-7l8m-9n0o-1p2q3r4s5t6u",
+    "roleName": "Contributor",
+    "resourceType": "Microsoft.Network/virtualNetworks",
+    "resourceName": "vnet-contoso-prod-002",
+    "assignetToType": "user",
+    "assignedTo": "prodnetwork@contoso.com",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Test",
+    "subscriptionId": "t1e2s3t4-5t6e-7s8t-9s0u-1b2s3c4r5i6p",
+    "roleName": "Contributor",
+    "resourceType": "Microsoft.Compute/virtualMachines/extensions",
+    "resourceName": "vmextension-contoso-test-001",
+    "assignetToType": "group",
+    "assignedTo": "Contoso-Test-Operations",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Dev",
+    "subscriptionId": "a1b2c3d4-e5f6-7l8m-9n0o-1p2q3r4s5t6u",
+    "roleName": "Contributor",
+    "resourceType": "Microsoft.Storage/storageAccounts",
+    "resourceName": "storage-contoso-dev-004",
+    "assignetToType": "group",
+    "assignedTo": "Contoso-Dev-Data-Team",
+    "roleCondition": "None"
+  },
+  {
+    "subscriptionName": "Contoso-Prod",
+    "subscriptionId": "f1g2h3i4-j5k6-7l8m-9n0o-1p2q3r4s5t6u",
+    "roleName": "Reader",
+    "resourceType": "Microsoft.ContainerRegistry/registries",
+    "resourceName": "acr-contoso-prod-001",
+    "assignetToType": "group",
+    "assignedTo": "Contoso-Prod-Containers",
+    "roleCondition": "None"
+  }
+]
