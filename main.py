@@ -192,7 +192,9 @@ def get_resource_type(resource_id):
             - "Invalid resource ID" if the resource ID is invalid.
             - "Unknown resource" if the resource ID does not match any known types.
     """
+    resource_id_lower = resource_id.lower()
     if not resource_id == "/":
+        parts_lower = resource_id_lower.split('/')
         parts = resource_id.split('/')
     else:
         return "Root Management Group"
@@ -200,20 +202,20 @@ def get_resource_type(resource_id):
     if len(parts) < 3:
         return "Invalid resource ID"
 
-    if len(parts) > 3 and parts[2] == "Microsoft.Management" and parts[3] == "managementGroups":
+    if len(parts) > 3 and parts_lower[2] == "microsoft.management" and parts_lower[3] == "managementgroups":
         return "Management Group"
 
-    if len(parts) > 9 and parts[3] == "resourceGroups" and parts[5] == "providers":
+    if len(parts) > 9 and parts_lower[3] == "resourcegroups" and parts_lower[5] == "providers":
         provider = parts[6]
         type1 = parts[7]
         type2 = parts[9]
         return f"{provider}/{type1}/{type2}"
-    if len(parts) > 7 and parts[3] == "resourceGroups" and parts[5] == "providers":
+    if len(parts) > 7 and parts_lower[3] == "resourcegroups" and parts_lower[5] == "providers":
         provider = parts[6]
         type1 = parts[7]
         return f"{provider}/{type1}"
 
-    if len(parts) == 5 and parts[3] == "resourceGroups":
+    if len(parts) == 5 and parts_lower[3] == "resourcegroups":
         return "Resource Group"
 
     if len(parts) == 3:
