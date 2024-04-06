@@ -263,7 +263,7 @@ def main():
     This function retrieves role assignments for a given principal in Azure.
     It takes the following command line arguments:
     -n, --principal-name: Principal name to get role assignments for
-                          user -> Email
+                          user -> Upn
                           group -> Group Name
                           servicePrincipal -> Service Principal Name
     -t, --principal-type: Principal type (choices: user, group, servicePrincipal)
