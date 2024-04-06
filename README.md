@@ -28,7 +28,7 @@ python main.py -n/--principal-name <Principal Name> -t/--principal-type <Princip
 
 ## Examples
 ```
-python main.py -n example@example.com -t user -s 00000000-0000-0000-0000-000000000000 -o csv
+python main.py -n example@example.com#EXT#@contoso.onmicrosoft.com -t user -s 00000000-0000-0000-0000-000000000000 -o csv
 ```
 
 ```
