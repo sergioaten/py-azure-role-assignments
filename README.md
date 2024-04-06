@@ -11,7 +11,7 @@ This Python script enables Azure Administrators to explore role assignments for 
 2. Install the required Python packages using pip install -r requirements.txt
 
 ## Usage
-1. Login to Azure using the `az login` command
+1. Login to Azure using the `az login --tenant <tenant id or domain name>` command
 2. Run the script using the following command
 ```
 python main.py -n/--principal-name <Principal Name> -t/--principal-type <Principal Type> -s/--subscription [Subscription ID] -o/--output [Output Format]
@@ -27,14 +27,15 @@ python main.py -n/--principal-name <Principal Name> -t/--principal-type <Princip
 - `-o, --output`: (Optional) Output file format. It will create output.csv/json file in the current directory (choices: json, csv).
 
 ## Examples
+Get role assignments for a user in a specific subscription and save the output in CSV format
 ```
 python main.py -n example@example.com#EXT#@contoso.onmicrosoft.com -t user -s 00000000-0000-0000-0000-000000000000 -o csv
 ```
-
+Get role assignments for a service principal in all subscriptions and save the output in CSV and JSON format
 ```
 python main.py -n APP-TEST -t servicePrincipal -o csv -o json
 ```
-
+Get role assignments for a group in all subscriptions
 ```
 python main.py -n "AZ-ADMINS" -t group
 ```
