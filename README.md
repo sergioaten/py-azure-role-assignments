@@ -18,7 +18,10 @@ python main.py -n/--principal-name <Principal Name> -t/--principal-type <Princip
 ```
 
 ## Command-line Arguments:
-- `-n, --principal-name`: Principal name to get role assignments for (user -> Email, group -> Group Name, servicePrincipal -> Service Principal Name).
+- `-n, --principal-name`: Principal name to get role assignments for
+  - user -> Search by UPN
+  - group -> Search by Group Name
+  - servicePrincipal -> Search by Service Principal Name
 - `-t, --principal-type`: Principal type (choices: user, group, servicePrincipal).
 - `-s, --subscription-id`: (Optional) Subscription ID to get role assignments for. If not provided, role assignments for all subscriptions will be checked.
 - `-o, --output`: (Optional) Output file format. It will create output.csv/json file in the current directory (choices: json, csv).
