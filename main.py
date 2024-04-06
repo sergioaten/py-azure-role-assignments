@@ -1,8 +1,10 @@
 import csv
+import sys
 import json
 import argparse
 import requests
 import subprocess
+import urllib.parse
 from texttable import Texttable
 from flatten_json import flatten
 
@@ -35,7 +37,7 @@ def get_subs_from_tenant(access_token, subscription_id=None):
 
     Args:
         access_token (str): The access token for authentication.
-        subscription_id (str, optional): The ID of the specific subscription to retrieve. 
+        subscription_id (str, optional): The ID of the specific subscription to retrieve.
             If not provided, retrieves information for all subscriptions.
 
     Returns:
@@ -120,18 +122,16 @@ def get_principal_by_name(access_token, principal_name, principal_type):
         str: The ID of the principal if found, None otherwise.
     """
     uri = "https://graph.microsoft.com/v1.0/"
+    principal_name = urllib.parse.quote(principal_name)
     if principal_type == "user":
         endpoint = "users"
-        filters = f"?$select=id,displayName&$filter=mail eq '{principal_name}'"
+        filters = f"?$select=id,displayName&$filter=userPrincipalName eq '{principal_name}'"
     elif principal_type == "group":
         endpoint = "groups"
         filters = f"?$select=id,displayName&$filter=displayName eq '{principal_name}'"
     elif principal_type == "servicePrincipal":
         endpoint = "servicePrincipals"
         filters = f"?$select=id,displayName&$filter=displayName eq '{principal_name}'"
-    else:
-        print("Invalid principal type")
-        return None
 
     try:
         uri = uri + endpoint + filters
@@ -141,8 +141,10 @@ def get_principal_by_name(access_token, principal_name, principal_type):
         )
         return response.json()["value"][0]["id"]
     except Exception as e:
+        if not response.json()["value"]:
+            print(f"Principal not found: {principal_name}")
         print(f"Error retrieving principal: {e}")
-        return None
+        sys.exit(1)
 
 
 def get_principal_data(access_token, principal_id):
@@ -190,7 +192,10 @@ def get_resource_type(resource_id):
             - "Invalid resource ID" if the resource ID is invalid.
             - "Unknown resource" if the resource ID does not match any known types.
     """
-    parts = resource_id.split('/')
+    if not resource_id == "/":
+        parts = resource_id.split('/')
+    else:
+        return "Root Management Group"
 
     if len(parts) < 3:
         return "Invalid resource ID"
@@ -306,8 +311,11 @@ def main():
         for role_assignment in role_assignments:
             scope_id = role_assignment['properties']['scope']
             resource_type = get_resource_type(scope_id)
-            resource_name = scope_id.split(
-                "/")[-1]
+            if not scope_id == "/":
+                resource_name = scope_id.split(
+                    "/")[-1]
+            else:
+                resource_name = "/"
 
             role_id = role_assignment['properties']['roleDefinitionId'].split(
                 "/")[-1]
@@ -322,6 +330,7 @@ def main():
 
             assigned_to = principal_data["displayName"] if principal_data[
                 "@odata.type"] == "#microsoft.graph.user" or principal_data["@odata.type"] == "#microsoft.graph.group" else principal_data["displayName"]
+            assigned_to_type = principal_data["@odata.type"].split(".")[-1]
 
             if resource_type == "Subscription":
                 resource_name = subscription["displayName"]
@@ -335,14 +344,27 @@ def main():
                 "roleName": role_name,
                 "resourceType": resource_type,
                 "resourceName": resource_name,
+                "assignetToType": assigned_to_type,
                 "assignedTo": assigned_to,
                 "roleCondition": role_condition if role_condition is not None else "None"
             }
 
             role_assignments_data.append(data)
 
-    data = [["Sub Name", "Role Name", "Resource Type",
-             "Name", "Assigned To", "Condition"]]
+    data = [["Subscription Name", "Role Name", "Resource Type",
+             "Name", "Assigned To Type", "Assigned To", "Condition"]]
+
+    resource_type_order = {"Root Management Group": 1, "Management Group": 2,
+                           "Subscription": 3, "Resource Group": 4}
+
+    role_assignments_data = sorted(
+        role_assignments_data,
+        key=lambda x: (x["subscriptionName"],
+                       resource_type_order.get(x["resourceType"], 5),
+                       x["resourceType"],
+                       x["resourceName"],
+                       x["roleName"],
+                       x["assignedTo"]))
 
     for roleassignment in role_assignments_data:
         data.append([
@@ -350,6 +372,7 @@ def main():
             roleassignment["roleName"],
             roleassignment["resourceType"],
             roleassignment["resourceName"],
+            roleassignment["assignetToType"],
             roleassignment["assignedTo"],
             roleassignment["roleCondition"]
         ])
