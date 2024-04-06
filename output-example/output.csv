@@ -1,0 +1,58 @@
+subscriptionName,subscriptionId,roleName,resourceType,resourceName,assignetToType,assignedTo,roleCondition
+Contoso-Dev,a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d,Contributor,Microsoft.Compute/virtualMachineScaleSets,vmscaleset-contoso-dev-001,user,devops2@contoso.com,None
+Contoso-Dev,a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d,Virtual Machine Contributor,Microsoft.Compute/virtualMachines,vm-contoso-dev-001,group,Contoso-Dev-Engineers,None
+Contoso-Dev,a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d,Reader,Microsoft.ContainerRegistry/registries,acr-contoso-dev-003,user,devcontainers@contoso.com,None
+Contoso-Dev,a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d,Reader,Microsoft.ContainerService/managedClusters,aks-contoso-dev-001,group,Contoso-Dev-Cluster-Team,None
+Contoso-Dev,a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d,Cosmos DB Contributor,Microsoft.DocumentDB/databaseAccounts,cosmos-contoso-dev-001,group,Contoso-Dev-Data-Team,None
+Contoso-Dev,a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d,Reader,Microsoft.EventGrid/topics,eg-topic-contoso-dev-001,group,Contoso-Dev-Messaging-Team,None
+Contoso-Dev,a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d,Contributor,Microsoft.EventHub/namespaces,ehub-contoso-dev-001,user,devmessaging@contoso.com,None
+Contoso-Dev,a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d,Key Vault Contributor,Microsoft.KeyVault/vaults,kv-contoso-dev-001,group,Contoso-Dev-Security-Team,None
+Contoso-Dev,a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d,Contributor,Microsoft.KeyVault/vaults,kv-contoso-dev-002,user,devsecurity@contoso.com,None
+Contoso-Dev,a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d,Contributor,Microsoft.Logic/workflows,logicapp-contoso-dev-001,group,Contoso-Dev-Integration-Team,None
+Contoso-Dev,a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d,Contributor,Microsoft.Network/loadBalancers,lb-contoso-dev-001,group,Contoso-Dev-Network-Team,None
+Contoso-Dev,a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d,Contributor,Microsoft.Network/virtualNetworks,vnet-contoso-dev-002,user,devadmin@contoso.com,None
+Contoso-Dev,a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d,Reader,Microsoft.Network/virtualNetworks,vnet-contoso-dev-003,user,devnetwork@contoso.com,None
+Contoso-Dev,a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d,Contributor,Microsoft.Network/vpnGateways,vpn-contoso-dev-001,user,devops@contoso.com,None
+Contoso-Dev,a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d,SQL Server Contributor,Microsoft.Sql/servers,sql-contoso-dev-001,group,Contoso-Dev-DBA-Team,None
+Contoso-Dev,a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d,Reader,Microsoft.Storage/storageAccounts,storage-contoso-dev-002,group,Contoso-Dev-Team,None
+Contoso-Dev,a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d,Contributor,Microsoft.Storage/storageAccounts,storage-contoso-dev-003,user,devlead2@contoso.com,None
+Contoso-Dev,a1b2c3d4-e5f6-7l8m-9n0o-1p2q3r4s5t6u,Contributor,Microsoft.Storage/storageAccounts,storage-contoso-dev-004,group,Contoso-Dev-Data-Team,None
+Contoso-Dev,a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d,Contributor,Microsoft.Web/serverFarms,appservice-contoso-dev-002,group,Contoso-Dev-Web-Team,None
+Contoso-Dev,a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d,Owner,Microsoft.Web/sites,webapp-contoso-dev-001,user,devlead@contoso.com,None
+Contoso-Prod,f1g2h3i4-j5k6-7l8m-9n0o-1p2q3r4s5t6u,Contributor,Microsoft.Authorization/policyAssignments,policy-contoso-prod-001,user,prodsecurity@contoso.com,None
+Contoso-Prod,f1g2h3i4-j5k6-7l8m-9n0o-1p2q3r4s5t6u,Contributor,Microsoft.CognitiveServices/accounts,cs-contoso-prod-001,group,Contoso-Prod-AI-Team,None
+Contoso-Prod,f1g2h3i4-j5k6-7l8m-9n0o-1p2q3r4s5t6u,Contributor,Microsoft.Compute/disks,disk-contoso-prod-001,user,prodadmin@contoso.com,None
+Contoso-Prod,f1g2h3i4-j5k6-7l8m-9n0o-1p2q3r4s5t6u,Reader,Microsoft.Compute/galleries,gallery-contoso-prod-001,user,prodgallery@contoso.com,None
+Contoso-Prod,f1g2h3i4-j5k6-7l8m-9n0o-1p2q3r4s5t6u,Reader,Microsoft.Compute/virtualMachineScaleSets,vmscaleset-contoso-prod-001,group,Contoso-Prod-AutoScale-Team,None
+Contoso-Prod,f1g2h3i4-j5k6-7l8m-9n0o-1p2q3r4s5t6u,Contributor,Microsoft.Compute/virtualMachines,vm-contoso-prod-002,group,Contoso-Prod-Engineers,None
+Contoso-Prod,f1g2h3i4-j5k6-7l8m-9n0o-1p2q3r4s5t6u,Contributor,Microsoft.Compute/virtualMachines/extensions,vmextension-contoso-prod-001,user,prodops@contoso.com,None
+Contoso-Prod,f1g2h3i4-j5k6-7l8m-9n0o-1p2q3r4s5t6u,Reader,Microsoft.ContainerRegistry/registries,acr-contoso-prod-001,group,Contoso-Prod-Containers,None
+Contoso-Prod,f1g2h3i4-j5k6-7l8m-9n0o-1p2q3r4s5t6u,Contributor,Microsoft.DocumentDB/databaseAccounts,cosmos-contoso-prod-002,group,Contoso-Prod-DBA-Team,None
+Contoso-Prod,f1g2h3i4-j5k6-7l8m-9n0o-1p2q3r4s5t6u,Contributor,Microsoft.EventHub/namespaces,ehub-contoso-prod-001,group,Contoso-Prod-Messaging-Team,None
+Contoso-Prod,f1g2h3i4-j5k6-7l8m-9n0o-1p2q3r4s5t6u,Contributor,Microsoft.KeyVault/vaults,kv-contoso-prod-001,user,prodsecurity2@contoso.com,None
+Contoso-Prod,f1g2h3i4-j5k6-7l8m-9n0o-1p2q3r4s5t6u,Reader,Microsoft.Network/networkInterfaces,nic-contoso-prod-001,group,Contoso-Prod-Network-Team,None
+Contoso-Prod,f1g2h3i4-j5k6-7l8m-9n0o-1p2q3r4s5t6u,Contributor,Microsoft.Network/networkSecurityGroups,nsg-contoso-prod-001,group,Contoso-Prod-Security-Team,None
+Contoso-Prod,f1g2h3i4-j5k6-7l8m-9n0o-1p2q3r4s5t6u,Network Contributor,Microsoft.Network/virtualNetworks,vnet-contoso-prod-001,group,Contoso-Prod-Network-Team,None
+Contoso-Prod,f1g2h3i4-j5k6-7l8m-9n0o-1p2q3r4s5t6u,Contributor,Microsoft.Network/virtualNetworks,vnet-contoso-prod-002,user,prodnetwork@contoso.com,None
+Contoso-Prod,f1g2h3i4-j5k6-7l8m-9n0o-1p2q3r4s5t6u,Contributor,Microsoft.ServiceBus/namespaces,sb-contoso-prod-001,user,prodmessaging@contoso.com,None
+Contoso-Prod,f1g2h3i4-j5k6-7l8m-9n0o-1p2q3r4s5t6u,Reader,Microsoft.Sql/servers,sql-contoso-prod-002,user,prodDBA@contoso.com,None
+Contoso-Prod,f1g2h3i4-j5k6-7l8m-9n0o-1p2q3r4s5t6u,Contributor,Microsoft.Sql/servers/databases,sqldb-contoso-prod-001,group,Contoso-Prod-DBA-Team,None
+Contoso-Prod,f1g2h3i4-j5k6-7l8m-9n0o-1p2q3r4s5t6u,Storage Blob Data Contributor,Microsoft.Storage/storageAccounts,storagecontosoprod001,group,Contoso-Prod-Team,None
+Contoso-Prod,f1g2h3i4-j5k6-7l8m-9n0o-1p2q3r4s5t6u,Contributor,Microsoft.Web/sites,webapp-contoso-prod-002,user,prodadmin2@contoso.com,None
+Contoso-Test,t1e2s3t4-5t6e-7s8t-9s0u-1b2s3c4r5i6p,Reader,Microsoft.Compute/availabilitySets,avset-contoso-test-001,group,Contoso-Test-Operations,None
+Contoso-Test,t1e2s3t4-5t6e-7s8t-9s0u-1b2s3c4r5i6p,Reader,Microsoft.Compute/galleries/images,galleryimage-contoso-test-001,group,Contoso-Test-VM-Image-Team,None
+Contoso-Test,t1e2s3t4-5t6e-7s8t-9s0u-1b2s3c4r5i6p,Contributor,Microsoft.Compute/virtualMachineScaleSets,vmscaleset-contoso-test-002,group,Contoso-Test-AutoScale-Team,None
+Contoso-Test,t1e2s3t4-5t6e-7s8t-9s0u-1b2s3c4r5i6p,Contributor,Microsoft.Compute/virtualMachines,vm-contoso-test-001,group,Contoso-Test-Engineers,None
+Contoso-Test,t1e2s3t4-5t6e-7s8t-9s0u-1b2s3c4r5i6p,Owner,Microsoft.Compute/virtualMachines,vm-contoso-test-002,group,Contoso-Test-VM-Team,None
+Contoso-Test,t1e2s3t4-5t6e-7s8t-9s0u-1b2s3c4r5i6p,Contributor,Microsoft.Compute/virtualMachines/extensions,vmextension-contoso-test-001,group,Contoso-Test-Operations,None
+Contoso-Test,t1e2s3t4-5t6e-7s8t-9s0u-1b2s3c4r5i6p,Contributor,Microsoft.ContainerRegistry/registries,acr-contoso-test-001,group,Contoso-Test-Containers,None
+Contoso-Test,t1e2s3t4-5t6e-7s8t-9s0u-1b2s3c4r5i6p,Owner,Microsoft.ContainerRegistry/registries,acr-contoso-test-002,user,testadmin2@contoso.com,None
+Contoso-Test,t1e2s3t4-5t6e-7s8t-9s0u-1b2s3c4r5i6p,Owner,Microsoft.ContainerService/managedClusters,aks-contoso-test-002,group,Contoso-Test-Kubernetes-Team,None
+Contoso-Test,t1e2s3t4-5t6e-7s8t-9s0u-1b2s3c4r5i6p,Contributor,Microsoft.Logic/workflows,logicapp-contoso-test-001,group,Contoso-Test-Integration-Team,None
+Contoso-Test,t1e2s3t4-5t6e-7s8t-9s0u-1b2s3c4r5i6p,Contributor,Microsoft.Network/loadBalancers,lb-contoso-test-001,user,testnetwork@contoso.com,None
+Contoso-Test,t1e2s3t4-5t6e-7s8t-9s0u-1b2s3c4r5i6p,Contributor,Microsoft.Network/networkWatchers,nw-contoso-test-001,user,testnetwork2@contoso.com,None
+Contoso-Test,t1e2s3t4-5t6e-7s8t-9s0u-1b2s3c4r5i6p,Contributor,Microsoft.Network/publicIPAddresses,ip-contoso-test-001,user,testadmin@contoso.com,None
+Contoso-Test,t1e2s3t4-5t6e-7s8t-9s0u-1b2s3c4r5i6p,Owner,Microsoft.ServiceFabricMesh/clusters,sfmesh-contoso-test-001,group,Contoso-Test-App-Team,None
+Contoso-Test,t1e2s3t4-5t6e-7s8t-9s0u-1b2s3c4r5i6p,Owner,Microsoft.Storage/storageAccounts,storage-contoso-test-002,user,testlead@contoso.com,None
+Contoso-Test,t1e2s3t4-5t6e-7s8t-9s0u-1b2s3c4r5i6p,Reader,Microsoft.Storage/storageAccounts,storagecontosotest001,user,testuser@contoso.com,None
+Contoso-Test,t1e2s3t4-5t6e-7s8t-9s0u-1b2s3c4r5i6p,Reader,Microsoft.Web/serverFarms,appservice-contoso-test-001,group,Contoso-Test-DevOps,None
