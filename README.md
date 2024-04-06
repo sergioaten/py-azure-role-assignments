@@ -42,3 +42,5 @@ python main.py -n "AZ-ADMINS" -t group
 
 ## Output
 The script generates an output table displaying role assignments for the specified principal within Azure subscriptions. Additionally, it saves the data in either JSON or CSV format based on the specified output format.
+
+In the examples-output folder you can see an example of each output in JSON or CSV
