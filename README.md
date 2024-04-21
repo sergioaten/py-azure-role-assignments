@@ -8,7 +8,7 @@ This Python script enables Azure Administrators to explore role assignments for 
 
 ## Installation
 1. Clone or download the script from the repository.
-2. Install the required Python packages using pip install -r requirements.txt
+2. Install the required Python packages using `pip install -r requirements.txt`
 
 ## Usage
 1. Login to Azure using the `az login --tenant <tenant id or domain name>` command
