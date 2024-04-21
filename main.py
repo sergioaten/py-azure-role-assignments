@@ -277,7 +277,7 @@ def main():
         formatter_class=argparse.RawTextHelpFormatter
     )
     parser.add_argument(
-        "-n", "--principal-name", help="Principal name to get role assignments for\nuser -> Email\ngroup -> Group Name\nservicePrincipal -> Service Principal Name", required=True)
+        "-n", "--principal-name", help="Principal name to get role assignments for\nuser -> User Principal Name\ngroup -> Group Name\nservicePrincipal -> Service Principal Name", required=True)
     parser.add_argument(
         "-t", "--principal-type", help="Principal type", choices=["user", "group", "servicePrincipal"], required=True)
     parser.add_argument(
