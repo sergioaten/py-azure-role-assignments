@@ -132,6 +132,9 @@ def get_principal_by_name(access_token, principal_name, principal_type):
     elif principal_type == "servicePrincipal":
         endpoint = "servicePrincipals"
         filters = f"?$select=id,displayName&$filter=displayName eq '{principal_name}'"
+    elif principal_type == "managedIdentity":
+        endpoint = "servicePrincipals"
+        filters = f"?$select=id,displayName&$filter=displayName eq '{principal_name}' and servicePrincipalType eq 'managedIdentity'"
 
     try:
         uri = uri + endpoint + filters
@@ -266,7 +269,7 @@ def main():
                           user -> Upn
                           group -> Group Name
                           servicePrincipal -> Service Principal Name
-    -t, --principal-type: Principal type (choices: user, group, servicePrincipal)
+    -t, --principal-type: Principal type (choices: user, group, servicePrincipal, managedIdentity)
     -s, --subscription-id: Subscription id to get role assignments for.
                            If not provided, all subscriptions will be checked.
     -o, --output: Output file format. It will create output.csv/json file in the current directory.
@@ -279,7 +282,7 @@ def main():
     parser.add_argument(
         "-n", "--principal-name", help="Principal name to get role assignments for\nuser -> User Principal Name\ngroup -> Group Name\nservicePrincipal -> Service Principal Name", required=True)
     parser.add_argument(
-        "-t", "--principal-type", help="Principal type", choices=["user", "group", "servicePrincipal"], required=True)
+        "-t", "--principal-type", help="Principal type", choices=["user", "group", "servicePrincipal", "managedIdentity"], required=True)
     parser.add_argument(
         "-s", "--subscription-id", help="Subscription id to get role assignments for, if not provided, all subscriptions will be checked", required=False)
     parser.add_argument("-o", "--output", help="Output file format, will create output.csv/json file in the current directory",
