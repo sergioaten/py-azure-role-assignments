@@ -14,7 +14,7 @@ This Python script enables Azure Administrators to explore role assignments for 
 1. Login to Azure using the `az login --tenant <tenant id or domain name>` command
 2. Run the script using the following command
 ```
-python3 main.py -n/--principal-name <upn|groupName|servicePrincipalName|managedIdentity > -t/--principal-type <user|group|servicePrincipal> -s/--subscription [subscriptionId] -o/--output [json|csv]
+python3 main.py -n/--principal-name <upn|groupName|servicePrincipalName|managedIdentityName > -t/--principal-type <user|group|servicePrincipal|managedIdentity > -s/--subscription [subscriptionId] -o/--output [json|csv]
 ```
 
 ## Command-line Arguments:
